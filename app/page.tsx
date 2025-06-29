@@ -229,7 +229,7 @@ export default function BookingManagement() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-green-600">
-                {stats.totalRevenue.toLocaleString()} ر.س
+                {stats.totalRevenue.toLocaleString()} ر.ع
               </div>
             </CardContent>
           </Card>
@@ -241,7 +241,7 @@ export default function BookingManagement() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-blue-600">
-                {stats.totalPaid.toLocaleString()} ر.س
+                {stats.totalPaid.toLocaleString()} ر.ع
               </div>
             </CardContent>
           </Card>
@@ -253,7 +253,7 @@ export default function BookingManagement() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-orange-600">
-                {stats.totalRemaining.toLocaleString()} ر.س
+                {stats.totalRemaining.toLocaleString()} ر.ع
               </div>
             </CardContent>
           </Card>
@@ -369,7 +369,7 @@ export default function BookingManagement() {
 
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="totalPrice">سعر الاتفاق (ر.س)</Label>
+                          <Label htmlFor="totalPrice">سعر الاتفاق (ر.ع)</Label>
                           <Input
                             id="totalPrice"
                             type="number"
@@ -381,7 +381,7 @@ export default function BookingManagement() {
                         </div>
                         
                         <div>
-                          <Label htmlFor="paidAmount">المبلغ المدفوع (ر.س)</Label>
+                          <Label htmlFor="paidAmount">المبلغ المدفوع (ر.ع)</Label>
                           <Input
                             id="paidAmount"
                             type="number"
@@ -414,7 +414,7 @@ export default function BookingManagement() {
                             {calculateRemainingAmount(
                               parseFloat(formData.totalPrice) || 0,
                               parseFloat(formData.paidAmount) || 0
-                            ).toLocaleString()} ر.س
+                            ).toLocaleString()} ر.ع
                           </p>
                         </div>
                       )}
@@ -495,14 +495,14 @@ export default function BookingManagement() {
                           </a>
                         </TableCell>
                         <TableCell>
-                          {booking.totalPrice.toLocaleString()} ر.س
+                          {booking.totalPrice.toLocaleString()} ر.ع
                         </TableCell>
                         <TableCell>
-                          {booking.paidAmount.toLocaleString()} ر.س
+                          {booking.paidAmount.toLocaleString()} ر.ع
                         </TableCell>
                         <TableCell>
                           <span className={booking.remainingAmount > 0 ? 'text-orange-600 font-medium' : 'text-green-600'}>
-                            {booking.remainingAmount.toLocaleString()} ر.س
+                            {booking.remainingAmount.toLocaleString()} ر.ع
                           </span>
                         </TableCell>
                         <TableCell>
